@@ -1,13 +1,15 @@
 package chapter2;
 
 import java.util.ArrayList;
+
+import chapter2.Order;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-import org.apache.commons.math3.geometry.partitioning.BSPTreeVisitor.Order;
 
 import io.reactivex.Observable;
 
