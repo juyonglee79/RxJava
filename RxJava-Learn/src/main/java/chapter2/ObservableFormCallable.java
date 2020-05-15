@@ -20,6 +20,7 @@ public class ObservableFormCallable {
 	}
 	*/
 	
+	//람다 표현식이 없는 fromCallable() 함수
 	Callable<String> callable = new Callable<String>() {
 		@Override
 		public String call() throws Exception {
