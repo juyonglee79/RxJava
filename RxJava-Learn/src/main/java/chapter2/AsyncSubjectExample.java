@@ -1,5 +1,6 @@
 package chapter2;
 
+import io.reactivex.Observable;
 import io.reactivex.subjects.AsyncSubject;
 
 public class AsyncSubjectExample {
@@ -14,7 +15,14 @@ public class AsyncSubjectExample {
 		subject.onNext("5");
 		subject.onComplete();
 		
-
+		// 구독자로 동작하는  AsyncSubject 클래스
+		Float[] temperature = {10.1f, 13.4f, 12.5f};
+		Observable<Float> source = Observable<T>.fromArray(temperature);
+		
+		AsycSubject<Float> subject = AsyncSubject.create();
+		subject.subscribe(data -> System.out.println("Subscriber #1 => "+ data));
+		
+		source.subscribe(subject);
 	}
 
 }
