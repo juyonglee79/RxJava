@@ -4,7 +4,7 @@ public class Order2 {
 	
 	@Override
 	public String toString() {
-		return "Order ID " + mID;
+		return "Order ID " ;
 	}
 	
 
