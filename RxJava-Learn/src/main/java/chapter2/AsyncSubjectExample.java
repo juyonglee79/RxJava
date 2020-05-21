@@ -6,6 +6,8 @@ import io.reactivex.subjects.AsyncSubject;
 public class AsyncSubjectExample {
 
 	public static void main(String[] args) {
+		
+	/*
 		// AsyncSubject 클래스 활용 예시
 		AsyncSubject<String> subject = AsyncSubject.create();
 		subject.subscribe(data -> System.out.println("Subscriber #1 => "+ data));
@@ -23,6 +25,19 @@ public class AsyncSubjectExample {
 		subject.subscribe(data -> System.out.println("Subscriber #1 => "+ data));
 		
 		source.subscribe(subject);
+	*/
+		
+		AsyncSubject<Integer> subject = AsyncSubject.create();
+		subject.onNext(10);
+		subject.onNext(11);
+		subject.subscribe(data -> System.out.println());
+		subject.onNext(12);
+		subject.onComplete();
+		subject.onNext(13);
+		subject.subscribe(data -> System.out.println("Subscriber #2 => "+ data));
+		subject.subscribe(data -> System.out.println("Subscriber #3 => "+ data));
+		
+		
 	}
 
 }
