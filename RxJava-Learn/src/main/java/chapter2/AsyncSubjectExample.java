@@ -1,6 +1,5 @@
 package chapter2;
 
-import io.reactivex.Observable;
 import io.reactivex.subjects.AsyncSubject;
 
 public class AsyncSubjectExample {
